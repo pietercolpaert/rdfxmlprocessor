@@ -1,8 +1,8 @@
 {
   "name": "rdfxmlprocessor",
-  "version": "0.0.1-alpha",
+  "version": "0.0.3-alpha",
   "description": "RDF/XML processor",
-  "main": "src/rdfxmlprocesor.js",
+  "main": "src/rdfxmlprocessor.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
   },

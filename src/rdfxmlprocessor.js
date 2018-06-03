@@ -130,10 +130,13 @@ class RDFXMLProcessor {
    * @param {Object} why The context to which this resource belongs
    * @param {Function} writeTriple The callback to write a triple to the end-user
    */
-  parse (document, base, why, writeTriple) {
+  parse (document, base, graph, writeTriple) {
     if (!writeTriple) {
-      writeTriple = why
-      why = this.factory.defaultGraph()
+      writeTriple = graph
+      graph = this.factory.defaultGraph()
+    } else {
+      //Make named node of why
+      graph = this.factory.namedNode(graph);
     }
     this.writeTriple = (s,p,o,g) => {
       writeTriple(this.factory.quad(s,p,o,g))
@@ -158,7 +161,7 @@ class RDFXMLProcessor {
       throw new Error("RDFXMLProcessor: can't find root in " + base + '. Halting. ')
     // return false
     }
-    this.why = why // our topmost frame
+    this.why = graph // our topmost frame
     var f = new Frame(this)
     this.base = base
     f.base = base
