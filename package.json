@@ -1,0 +1,35 @@
+{
+  "name": "rdfxmlprocessor",
+  "version": "0.0.1-alpha",
+  "description": "RDF/XML processor",
+  "main": "src/rdfxmlprocesor.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "keywords": [
+    "rdfxml",
+    "xml",
+    "parser",
+    "rdf-xml",
+    "rdf"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pietercolpaert/rdfxmlprocessor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pietercolpaert/rdfxmlprocessor/issues"
+  },
+  "author": "David Sheets <dsheets@mit.edu>",
+  "contributors": [
+    "Pieter Colpaert <pieter.colpaert@ugent.be> (https://pietercolpaert.be/#me)"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "n3": "^1.0.0-beta.1"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "xmldom": "^0.1.27"
+  }
+}
